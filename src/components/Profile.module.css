@@ -1,0 +1,11 @@
+.content{
+    grid-area: c;
+}
+
+
+
+.car{
+    width: 1000px;
+    height: 200px;
+    object-fit:fill;
+}
