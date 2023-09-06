@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {  HashRouter, Route, Routes } from 'react-router-dom';
 import Settings from './components/Settings/Settings';
 import Music from './components/Music/Music';
 import News from './components/News/News';
@@ -13,7 +13,7 @@ import News from './components/News/News';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='app-wrapper'>
         <Header />
         <Navbar />
@@ -27,7 +27,7 @@ const App = () => {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

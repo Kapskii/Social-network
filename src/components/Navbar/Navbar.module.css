@@ -1,10 +1,10 @@
 .nav {
-grid-area: n;
-background-color: #132e35;
-    }
+    grid-area: n;
+    background-color: #132e35;
+    height: 100vh;
+}
 
-.item { 
-    color: #afb3b7;
+.item {
     margin-left: 10px;
     margin-top: 10px;
     font-family: "Gill Sans", sans-serif;
@@ -12,23 +12,16 @@ background-color: #132e35;
     align-content: center;
 }
 
-
-
+.item a {
+    text-decoration: none;
+    color: #afb3b7;
+}
 
 .item :hover {
     color: white;
     text-decoration: none;
 }
 
-.item :active {
+.item a.active {
     color: orangered;
-}
-
-item:link {
-    color:#afb3b7;
-    
-}
-
-item:visited {
-    color: white
 }
