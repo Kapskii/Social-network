@@ -1,7 +1,10 @@
-
+.content {
+    background-color: #afb3b7;
+}
 
 .item {
-    color: white;
+    align-items: center;
+    color: black;
 }
 
 .item img {

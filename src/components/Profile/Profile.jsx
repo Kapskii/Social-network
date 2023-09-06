@@ -6,16 +6,17 @@ import Post from './Post/Post';
 
 const Profile = () => {
   return <div className={s.content}>
-    <div>
+    <div className={s.image}>
       <img className={s.car} src='https://quto.ru/service-imgs/4c/f8/f3/f4/4cf8f3f44d42a.jpeg' />
     </div>
-    <div className='input'>
+    <div className='input'> 
       <input type='text'></input>
       <button>Добавить пост</button>
-    </div>
+    </div> 
+     <Post message='How are u?' />
+    <Post message="I'm fine!" />
     <Post />
-    <Post />
-    <Post />
+    <Post /> 
     <Post />
   </div>
 }

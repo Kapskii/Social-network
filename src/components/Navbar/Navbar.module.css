@@ -1,13 +1,6 @@
 .nav {
-    position: relative;
-    grid-area: n;
-    background-color: #2d4a53;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 1200px;
-    height: 50px;
-    z-index: 2;
+grid-area: n;
+background-color: #132e35;
     }
 
 .item {
