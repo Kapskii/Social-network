@@ -2,6 +2,7 @@
     grid-area: n;
     background-color: #132e35;
     height: 100vh;
+    padding: 20px;
 }
 
 .item {
@@ -24,4 +25,5 @@
 
 .item a.active {
     color: orangered;
+    font-weight: bold;
 }
