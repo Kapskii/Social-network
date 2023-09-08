@@ -1,37 +1,20 @@
 .header {
-    grid-area: h;
+    grid-area: 'header';
     background-color: #0D1F23;
+    display: flex;
+    justify-content: space-between;
+
+    max-height: 70px;
 }
-
-
-img.logo {
-    position: absolute;
-    z-index: 1000;
-    width: 50px;
-    margin-top: 15px;
-    margin-left: 15px;
-    
-    border-radius: 50%;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;
-  }
-  img.logo:hover {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); 
-            
-  }
        
-  .title {
-    position: absolute;
-    
-    margin-left: 78px;
-    
-  }
+ 
 
   h2{
-    font-family: "Gill Sans", sans-serif;
+    margin-left: 22px;
+    margin-top: 25px;
+    font-family: 'Oxanium', cursive;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(45deg, #8A2BE2, #FF00FF, #9932CC, #800080);
     background-size: 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -50,6 +33,7 @@ img.logo {
     100% {
       background-position: 0 50%;
     }
+    
   }
 
   

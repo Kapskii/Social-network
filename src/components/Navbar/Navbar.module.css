@@ -1,14 +1,14 @@
 .nav {
-    grid-area: n;
-    background-color: #132e35;
-    height: 100vh;
+    background-color: #0D1F23;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .item {
-    margin-left: 10px;
-    margin-top: 10px;
-    font-family: "Gill Sans", sans-serif;
+    margin-left: 2px;
+    font-family: 'Oxanium', cursive;
     font-size: 22px;
     align-content: center;
 }
@@ -19,12 +19,15 @@
 }
 
 .item :hover {
-    color: white;
+    color: #8A2BE2;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0 0 0 transparent,
+    0 0 10px #8A2BE2,
+    0 0 15px #8A2BE2; 
 }
 
 .item a.active {
-    color: orangered;
+    color: #8A2BE2;
     font-weight: bold;
 }

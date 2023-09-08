@@ -15,7 +15,7 @@ grid-template-columns: 2fr 10fr;
 }
 
 .dialogsItems :hover {
-    color: orangered;
+    color: #8A2BE2;
 }
 
 .dialog a.active {

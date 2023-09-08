@@ -1,16 +1,18 @@
 .app-wrapper {
     display: grid;
     grid-template-areas:
-        "h h "
-        "n c";
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 10% 90%;
+        "header"
+        "content";
+    /* grid-template-rows: 70px 1fr;
+    grid-template-columns: 10% 90%; */
 }
 
 .app-wrapper-content {
-    grid-area: c;
+    grid-area: 'content';
     width: 100%;
     background-color: #afb3b7;
     display: inline-block;
     overflow: hidden;
+
+    height: calc(100vh - 70px);
 }
