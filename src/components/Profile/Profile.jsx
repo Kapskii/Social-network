@@ -3,6 +3,11 @@ import s from './Profile.module.css'
 import Post from './Post/Post';
 
 
+let postData = [
+  {id: 1, message: 'How are u?', likesCount: 22},
+  {id: 2, message: "I'm fine!", likesCount: 12}
+]
+let posts = postData.map(p => <Post message={p.message} likesCount={p.likesCount} />)
 
 const Profile = () => {
   return <div>
@@ -14,11 +19,10 @@ const Profile = () => {
       <textarea></textarea>
       </div>
       <div>
-      <button>Добавить пост</button>
+      <button>Add Post</button>
       </div>
     </div> 
-     <Post message='How are u?' likesCount='2' />
-    <Post message="I'm fine!" likesCount='23'/>
+     {posts}
   </div>
 }
 

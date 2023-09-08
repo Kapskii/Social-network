@@ -21,6 +21,7 @@
 .item :hover {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .item a.active {
