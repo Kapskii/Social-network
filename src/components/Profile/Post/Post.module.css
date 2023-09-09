@@ -1,5 +1,6 @@
 .item {
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     color: black;
     padding: 10px;
 }
@@ -8,4 +9,10 @@
     width: 40px;
     height: 40px;
     border-radius: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
 }

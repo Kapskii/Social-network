@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Profile.module.css'
 import Posts from './Post/Post';
 import { AddPostForm } from './AddPostForm/AddPostForm';
+import avatarP from '../../common/img/avatarP.jpg';
 
 
 const postData = [
@@ -17,8 +18,20 @@ export const Profile = () => {
     <div className={s.image}>
       <img className={s.picture} src='https://img.goodfon.ru/original/2500x1667/2/50/neon-perelivy-volny-igra-sveta-kompiuternaia-grafika-plamia.jpg' />
     </div>
-    <AddPostForm />
-    {posts}
+
+    <div className={s.profileWrapper}>
+
+      <div className={s.profileInfo}>
+        <img className={s.avatarP} src={avatarP} alt='profile avatar' />
+        <div className={s.name}>Slava Kapski</div>
+      </div>
+      <div className={s.AddPostForm}>
+        <AddPostForm />
+        {posts}
+      </div>
+    </div>
+
+
   </div>
 }
 

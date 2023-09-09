@@ -5,19 +5,26 @@
 
 }
 
-.textarea {
-    padding: 10px;
-}
 
-.formWrapper {
+
+.profileWrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-
-    padding: 10px;
 }
 
-.formElement {
-resize: none;
+.profileInfo{
+    width: 30%;
+    height: 100vh;
+    background-color: var(--ligth-accent-color);
+}
+
+.avatarP {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: -50px;
+}
+
+.name {
+   
 }
