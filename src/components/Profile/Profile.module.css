@@ -5,26 +5,29 @@
 
 }
 
-
-
 .profileWrapper {
     display: flex;
 }
 
-.profileInfo{
+.profileInfo {
+    display: flex;
     width: 30%;
     height: 100vh;
-    background-color: var(--ligth-accent-color);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
 }
 
 .avatarP {
-    width: 200px;
-    height: 200px;
+    width: 230;
+    height: 230px;
     border-radius: 50%;
     margin-left: 20px;
-    margin-top: -50px;
+    margin-top: -120px;
 }
 
 .name {
-   
+    font-family: 'Oxanium', cursive;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
 }

@@ -1,9 +1,9 @@
 :root {
---accent-color: #f55951;
---dark-color: #361d32;
---dark-accent-color: #543c52;
---ligth-color: #f1e8e6;
---ligth-accent-color: #edd2cb;
+--accent-color: #ffbe00;
+--dark-color: #25182e;
+--dark-accent-color: #a4b8c4;
+--ligth-color: #fcfafa;
+--ligth-accent-color: #c8d3d5;
 }
 
 body {
