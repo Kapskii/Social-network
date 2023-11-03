@@ -1,17 +1,20 @@
-.app-wrapper {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "content";
-    
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
-.app-wrapper-content {
-    grid-area: 'content';
-    width: 100%;
-    background-color: var(--ligth-color);
-    display: inline-block;
-    overflow: hidden;
+.header {
+    background-color: gray;
+    position: absolute;
+    height: 55px;
+    z-index: 3;
+}
 
-    height: calc(100vh - 70px);
+.mainWrapper {
+    display: flex;
+    position: relative;
+    width: 100wv;
+    height: 100vh;
 }

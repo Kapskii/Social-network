@@ -1,0 +1,19 @@
+.navWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+
+.item a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.item .active {
+    color: rgb(255, 179, 0);
+}
+
+.item a:hover {
+    color: rgb(255, 179, 0);
+}

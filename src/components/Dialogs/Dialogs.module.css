@@ -1,31 +1,18 @@
+
 .dialogs {
-display: grid;
-grid-template-columns: 2fr 10fr;
+    display: flex;
 }
 
-.dialogsItems {
-    padding: 20px;
-    font-family: "Gill Sans", sans-serif;
-    font-size: 19px;
+.dialogsItems{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 30vw;
 }
 
-.dialogsItems a {
-    text-decoration: none;
-    color: #132e35;
-}
-
-.dialogsItems :hover {
-    color: #8A2BE2;
-}
-
-.dialog a.active {
-color: orangered;
-}
-
-.messages {
-    padding: 10px;
-}
-
-.message {
-padding: 10px;
+.messages{
+display: flex;
+flex-direction: column;
+align-items:flex-start;
+width: 70vw;
 }

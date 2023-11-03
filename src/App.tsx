@@ -1,35 +1,23 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import {Profile} from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
-import {  HashRouter, Route, Routes } from 'react-router-dom';
-import Settings from './components/Settings/Settings';
-import Music from './components/Music/Music';
-import News from './components/News/News';
+import { Header } from './Components/Header/Header';
+import { Propfile } from './Components/Profile/Propfile';
+import { Dialogs } from './Components/Dialogs/Dialogs';
+import { Route, Routes } from 'react-router-dom';
 
-
-
-const App = () => {
+export const App = () => {
   return (
-    <HashRouter>
-      <div className='app-wrapper'>
+    <div className='container'>
+      <div>
         <Header />
-        <div className="app-wrapper-content">
-    
-          <Routes>
-          <Route path='/dialogs' Component={Dialogs} />
-          <Route path='/profile' Component={Profile} />
-          <Route path='/settings' Component={Settings}/>
-          <Route path='/music' Component={Music}/>
-          <Route path='/news' Component={News}/>
-          </Routes>
-        </div>
       </div>
-    </HashRouter>
+      <div className='mainWrapper'>
+        <Routes>
+        <Route path='/' element={<Propfile/>}/>
+          <Route path='/profile' element={<Propfile/>}/>
+          <Route path='/dialogs' element={<Dialogs/>}/>
+        </Routes>
+      </div>
+    </div>
   );
 }
-
-export default App;
-
-
