@@ -1,23 +1,30 @@
 import s from './Dialogs.module.css'
+import { DialogItem } from './DialogItem/DialogItem'
+import { Message } from './Message/Message'
 
-export const Dialogs = () => {
+type PropsType = {
+    dialogsDate: Array<DialogsDateType>
+    messageDate: Array<MessageDateType>
+}
+
+type DialogsDateType = {
+    id: string
+    name: string
+}
+
+type MessageDateType = {
+    id: string
+    message: string
+}
+
+export const Dialogs = (props: PropsType) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <div className={s.dialog}>
-                    Slava
-                </div>
-                <div className={s.dialog}>
-                    Olya
-                </div>
-                <div className={s.dialog}>
-                    Vadim
-                </div>
+                {props.dialogsDate.map(el => <DialogItem id={el.id} name={el.name} />)}
             </div>
             <div className={s.messages}>
-                <div className={s.message}>Hi</div>
-                <div className={s.message}>How a u</div>
-                <div className={s.message}>Hello</div>
+                {props.messageDate.map(el => <Message message={el.message} />)}
             </div>
         </div>
     )

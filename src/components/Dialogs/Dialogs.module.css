@@ -5,14 +5,19 @@
 
 .dialogsItems{
 display: flex;
+gap: 20px;
 flex-direction: column;
 align-items: center;
 width: 30vw;
+background-color: whitesmoke;
+box-shadow: 6px 0px 21px -9px rgba(34, 60, 80, 0.3);
 }
 
 .messages{
 display: flex;
+gap: 20px;
 flex-direction: column;
 align-items:flex-start;
 width: 70vw;
+padding: 50px 0 0 50px;
 }

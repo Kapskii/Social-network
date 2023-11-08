@@ -37,6 +37,12 @@
     box-shadow: 6px 0px 21px -9px rgba(34, 60, 80, 0.3);
 }
 
+.postsWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
 .profileInfo img {
     width: 60%;
     margin-top: -50px;
