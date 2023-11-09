@@ -1,33 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './App.css';
 import { Header } from './Components/Header/Header';
 import { Propfile } from './Components/Profile/Propfile';
 import { Dialogs, DialogsDateType } from './Components/Dialogs/Dialogs';
 import { Route, Routes } from 'react-router-dom';
+import { StateType } from './redux/types';
 
-type PropsType = {
-  post: PostType[]
-  dialogs: DialogsType[]
-  message: MessageType[]
+
+type AppPropsType = {
+  data: StateType
 }
 
-export type PostType = {
-  id: string
-  post: string
-}
-
-export type DialogsType = {
-  id: string
-  name: string
-}
-
-export type MessageType = {
-  id: string
-  message: string
-}
-
-
-export const App = (props:PropsType) => {
+export const App:FC<AppPropsType> = ({data}) => {
   return (
     <div className='container'>
       <div>
@@ -35,9 +19,9 @@ export const App = (props:PropsType) => {
       </div>
       <div className='mainWrapper'>
         <Routes>
-          <Route path='/Social-network' element={<Propfile post={props.post} />} />
-          <Route path='/profile' element={<Propfile post={props.post} />} />
-          <Route path='/dialogs' element={<Dialogs dialogsDate={props.dialogs} messageDate={props.message} />} />
+          <Route path='/Social-network' element={<Propfile post={data.profilePage.post} />} />
+          <Route path='/profile' element={<Propfile post={data.profilePage.post} />} />
+          <Route path='/dialogs' element={<Dialogs dialogsDate={data.dialogsPage.dialog} messageDate={data.dialogsPage.message} />} />
         </Routes>
       </div>
     </div>

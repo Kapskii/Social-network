@@ -1,4 +1,6 @@
-export const state = {
+import { StateType } from "./types";
+
+export const state:StateType = {
     profilePage: {
         post: [
             { id: '1', post: 'Hello World' },
