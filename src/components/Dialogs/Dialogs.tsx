@@ -3,16 +3,16 @@ import { DialogItem } from './DialogItem/DialogItem'
 import { Message } from './Message/Message'
 
 type PropsType = {
-    dialogsDate: Array<DialogsDateType>
-    messageDate: Array<MessageDateType>
+    dialogsDate: DialogsDateType[]
+    messageDate: MessageDateType[]
 }
 
-type DialogsDateType = {
+export type DialogsDateType = {
     id: string
     name: string
 }
 
-type MessageDateType = {
+export type MessageDateType = {
     id: string
     message: string
 }

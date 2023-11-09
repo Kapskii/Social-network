@@ -1,19 +1,18 @@
+import { PostType } from "../../../App"
 import { Post } from "../post item/Post"
 
-export const MyPosts = () => {
 
-const postDate = [
-    {id: '1', post: 'Hello World'},
-    {id: '2', post: 'My name Slava Kapski'},
-    {id: '3', post: 'I like React'},
-    {id: '5', post: 'Good job!'},
-]
+type PropsType = {
+    post: PostType[]
+}
 
+
+export const MyPosts = (props:PropsType ) => {
 
     return(
         <div>
             <h2>My Posts</h2>
-            {postDate.map(el => <Post message={el.post}/>)}
+            {props.post.map(el => <Post message={el.post}/>)}
         </div>
     )
 }

@@ -1,9 +1,13 @@
 import React from "react";
 import s from './Profile.module.css'
 import { MyPosts } from "./posts/MyPosts";
+import { PostType } from "../../App";
 
+type PropsType = {
+    post: PostType[]
+}
 
-export const Propfile = () => {
+export const Propfile = (props: PropsType) => {
     return (
         <div className={s.wrapper}>
             <div className={s.content}>
@@ -19,7 +23,7 @@ export const Propfile = () => {
                         </div>
                     </div>
                     <div className={s.postsWrapper}>
-                        <MyPosts />
+                        <MyPosts post={props.post} />
                     </div>
                 </div>
             </div>
