@@ -6,6 +6,7 @@ import { ProfileDate } from "./profile date/ProfileDate";
 
 type PropsType = {
     post: PostType[]
+    addPost: (text:string)=>void
 }
 
 export const Propfile = (props: PropsType) => {
@@ -17,7 +18,7 @@ export const Propfile = (props: PropsType) => {
                 </div>
                 <div className={s.profileWrapper}>
                     <ProfileDate />
-                    <MyPosts post={props.post} />
+                    <MyPosts post={props.post} addPost={props.addPost}/>
                 </div>
             </div>
         </div>

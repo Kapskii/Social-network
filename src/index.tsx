@@ -5,6 +5,8 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import {  HashRouter } from 'react-router-dom';
 import { state } from './redux/state';
+import { addPost } from './redux/state';
+
 
 
 const root = ReactDOM.createRoot(
@@ -13,7 +15,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <HashRouter>
-    <App data={state} />
+    <App data={state} addPost={addPost}/>
   </HashRouter>
 );
 

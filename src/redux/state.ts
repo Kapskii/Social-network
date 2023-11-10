@@ -6,7 +6,7 @@ export const state:StateType = {
             { id: '1', post: 'Hello World' },
             { id: '2', post: 'My name Slava Kapski' },
             { id: '3', post: 'I like React' },
-            { id: '5', post: 'Good job!' },
+            { id: '4', post: 'Good job!' },
         ]
     },
     dialogsPage: {
@@ -21,4 +21,14 @@ export const state:StateType = {
             { id: '3', message: 'Hello' },
         ]
     }
+}
+console.log(state);
+
+
+export const addPost = (text:string) => {
+let post = {
+    id: '5',
+    post: text
+}
+state.profilePage.post.push(post)
 }

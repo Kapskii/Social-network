@@ -27,3 +27,7 @@ export type MessageType = {
     id: string
     message: string
 }
+
+export type AddPostType = {
+    addPost:()=>void
+}
