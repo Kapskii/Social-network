@@ -9,10 +9,11 @@ import { StateType } from './redux/types';
 
 type AppPropsType = {
   data: StateType
-  addPost: (text:string | undefined)=>void
+  addPost: () => void
+  updateTextArea: (text: string | undefined) => void
 }
 
-export const App:FC<AppPropsType> = ({data, addPost}) => {
+export const App: FC<AppPropsType> = ({ data, addPost, updateTextArea }) => {
   return (
     <div className='container'>
       <div>
@@ -20,7 +21,7 @@ export const App:FC<AppPropsType> = ({data, addPost}) => {
       </div>
       <div className='mainWrapper'>
         <Routes>
-          <Route path='/profile' element={<Propfile post={data.profilePage.post} addPost={addPost}/>} />
+          <Route path='/profile' element={<Propfile profilePage={data.profilePage} addPost={addPost} updateTextArea={updateTextArea} />} />
           <Route path='/dialogs' element={<Dialogs dialogsDate={data.dialogsPage.dialog} messageDate={data.dialogsPage.message} />} />
         </Routes>
       </div>

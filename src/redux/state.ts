@@ -1,5 +1,6 @@
-import { rerenderEntire } from "../render";
 import { StateType } from "./types";
+
+let rerenderEntire = (state:StateType) => {}
 
 export const state:StateType = {
     profilePage: {
@@ -8,7 +9,8 @@ export const state:StateType = {
             { id: '2', post: 'My name Slava Kapski' },
             { id: '3', post: 'I like React' },
             { id: '4', post: 'Good job!' },
-        ]
+        ],
+        newPostText: '',
     },
     dialogsPage: {
         dialog: [
@@ -26,11 +28,24 @@ export const state:StateType = {
 console.log(state);
 
 
-export const addPost = (newPost:string | undefined) => {
+export const addPost = () => {
 let post = {
     id: '5',
-    post: newPost,
+    post: state.profilePage.newPostText,
 }
 state.profilePage.post.unshift(post);
+state.profilePage.newPostText = '';
 rerenderEntire(state)
 }
+
+export const updateTextArea = (newText:string | undefined) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntire(state)
+    }
+
+
+    export const subscribe = (observer:any) => {
+        rerenderEntire = observer
+    }
+
+

@@ -1,12 +1,13 @@
 import React from "react";
 import s from './Profile.module.css'
 import { MyPosts } from "./posts/MyPosts";
-import { PostType } from "../../redux/types";
+import { ProfilePageType } from "../../redux/types";
 import { ProfileDate } from "./profile date/ProfileDate";
 
 type PropsType = {
-    post: PostType[]
-    addPost: (text:string | undefined)=>void
+    profilePage: ProfilePageType
+    addPost: () => void
+    updateTextArea: (text: string | undefined) => void
 }
 
 export const Propfile = (props: PropsType) => {
@@ -18,7 +19,7 @@ export const Propfile = (props: PropsType) => {
                 </div>
                 <div className={s.profileWrapper}>
                     <ProfileDate />
-                    <MyPosts post={props.post} addPost={props.addPost}/>
+                    <MyPosts profilePageItems={props.profilePage} addPost={props.addPost} updateTextArea={props.updateTextArea} />
                 </div>
             </div>
         </div>

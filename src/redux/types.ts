@@ -6,6 +6,7 @@ export type StateType = {
 
 export type ProfilePageType = {
     post: PostType[]
+    newPostText: string | undefined
 }
 
 export type DialogsPageType = {
