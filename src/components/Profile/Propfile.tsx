@@ -6,7 +6,7 @@ import { ProfileDate } from "./profile date/ProfileDate";
 
 type PropsType = {
     post: PostType[]
-    addPost: (text:string)=>void
+    addPost: (text:string | undefined)=>void
 }
 
 export const Propfile = (props: PropsType) => {

@@ -15,7 +15,7 @@ export type DialogsPageType = {
 
 export type PostType = {
     id: string
-    post: string
+    post: string | undefined
 }
 
 export type DialogType = {

@@ -1,7 +1,7 @@
 import s from './Post.module.css'
 
 type PropsType = {
-    message: string
+    message: string | undefined
 }
 
 export const Post = (props:PropsType) => {

@@ -1,3 +1,4 @@
+import { rerenderEntire } from "../render";
 import { StateType } from "./types";
 
 export const state:StateType = {
@@ -25,10 +26,11 @@ export const state:StateType = {
 console.log(state);
 
 
-export const addPost = (text:string) => {
+export const addPost = (newPost:string | undefined) => {
 let post = {
     id: '5',
-    post: text
+    post: newPost,
 }
-state.profilePage.post.push(post)
+state.profilePage.post.unshift(post);
+rerenderEntire(state)
 }

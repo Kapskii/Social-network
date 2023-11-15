@@ -9,7 +9,7 @@ import { StateType } from './redux/types';
 
 type AppPropsType = {
   data: StateType
-  addPost: (text:string)=>void
+  addPost: (text:string | undefined)=>void
 }
 
 export const App:FC<AppPropsType> = ({data, addPost}) => {
