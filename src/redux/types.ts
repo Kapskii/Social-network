@@ -1,4 +1,14 @@
 
+export type StoreType = {
+    _state: StateType
+    getState: ()=>StateType
+    _rerenderEntire: (state: StateType)=>void
+    addPost: ()=>void
+    updateTextArea: (newText: string | undefined)=>void
+    subscribe: (observer: (state: StateType)=>void)=>void
+}
+
+
 export type StateType = {
     profilePage: ProfilePageType
     dialogsPage: DialogsPageType
@@ -27,8 +37,4 @@ export type DialogType = {
 export type MessageType = {
     id: string
     message: string
-}
-
-export type AddPostType = {
-    addPost:()=>void
 }
