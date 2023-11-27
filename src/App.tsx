@@ -4,16 +4,15 @@ import { Header } from './Components/Header/Header';
 import { Propfile } from './Components/Profile/Propfile';
 import { Dialogs } from './Components/Dialogs/Dialogs';
 import { Route, Routes } from 'react-router-dom';
-import { StateType } from './redux/types';
+import { ActionType, StateType } from './redux/types';
 
 
 type AppPropsType = {
   data: StateType
-  addPost: () => void
-  updateTextArea: (text: string | undefined) => void
+  dispatch: (action: ActionType) => void
 }
 
-export const App: FC<AppPropsType> = ({ data, addPost, updateTextArea }) => {
+export const App: FC<AppPropsType> = ({ data, dispatch}) => {
   return (
     <div className='container'>
       <div>
@@ -21,7 +20,7 @@ export const App: FC<AppPropsType> = ({ data, addPost, updateTextArea }) => {
       </div>
       <div className='mainWrapper'>
         <Routes>
-          <Route path='/profile' element={<Propfile profilePage={data.profilePage} addPost={addPost} updateTextArea={updateTextArea} />} />
+          <Route path='/profile' element={<Propfile profilePage={data.profilePage} dispatch={dispatch} />} />
           <Route path='/dialogs' element={<Dialogs dialogsDate={data.dialogsPage.dialog} messageDate={data.dialogsPage.message} />} />
         </Routes>
       </div>

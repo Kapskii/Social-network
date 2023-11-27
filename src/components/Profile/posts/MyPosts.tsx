@@ -1,4 +1,4 @@
-import { ProfilePageType } from "../../../redux/types"
+import { ActionType, ProfilePageType } from "../../../redux/types"
 import { Post } from "../post item/Post"
 import s from './MyPosts.module.css'
 import React from "react"
@@ -6,8 +6,7 @@ import React from "react"
 
 type PropsType = {
     profilePageItems: ProfilePageType
-    addPost: () => void
-    updateTextArea: (text: string | undefined) => void
+    dispatch: (action: ActionType) => void
 }
 
 export const MyPosts = (props: PropsType) => {
@@ -15,12 +14,12 @@ export const MyPosts = (props: PropsType) => {
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
     const addPostHandler = () => {
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     }
 
     const onChangeTextHandler = () => {
         let newText = newPostElement.current?.value;
-        props.updateTextArea(newText)
+        props.dispatch({type: 'UPDATE-TEXT-AREA', newText: newText})
     }
 
     return (

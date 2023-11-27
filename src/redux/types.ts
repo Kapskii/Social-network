@@ -1,13 +1,11 @@
 
 export type StoreType = {
     _state: StateType
-    getState: ()=>StateType
-    _rerenderEntire: (state: StateType)=>void
-    addPost: ()=>void
-    updateTextArea: (newText: string | undefined)=>void
-    subscribe: (observer: (state: StateType)=>void)=>void
+    getState: () => StateType
+    _callSubsctire: (state: StateType) => void
+    subscribe: (observer: (state: StateType) => void) => void
+    dispatch: (action:ActionType) => void
 }
-
 
 export type StateType = {
     profilePage: ProfilePageType
@@ -37,4 +35,9 @@ export type DialogType = {
 export type MessageType = {
     id: string
     message: string
+}
+
+export type ActionType = { 
+    type: string
+    newText?: string | undefined
 }

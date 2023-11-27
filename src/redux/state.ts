@@ -1,6 +1,6 @@
-import { StateType, StoreType } from "./types";
+import { ActionType, StateType, StoreType } from "./types";
 
-export const store:StoreType = {
+export const store: StoreType = {
     _state: {
         profilePage: {
             post: [
@@ -24,26 +24,29 @@ export const store:StoreType = {
             ]
         }
     },
-    getState () {
+    _callSubsctire(state: StateType) { },
+
+    getState() {
         return this._state;
     },
-    _rerenderEntire (state: StateType) {},
-    addPost () {
-        let post = {
-            id: '5',
-            post: this._state.profilePage.newPostText,
-        }
-        this._state.profilePage.post.unshift(post);
-        this._state.profilePage.newPostText = '';
-        this._rerenderEntire(this._state)
+    subscribe(observer: (state: StateType) => void) {
+        this._callSubsctire = observer
     },
-    updateTextArea (newText: string | undefined) {
-        this._state.profilePage.newPostText = newText;
-        this._rerenderEntire(this._state)
-    },
-    subscribe (observer: (state: StateType) => void) {
-        this._rerenderEntire = observer
+
+
+    dispatch(action: ActionType) {
+if (action.type === 'ADD-POST') {
+    let post = {
+        id: '5',
+        post: this._state.profilePage.newPostText,
     }
-    
+    this._state.profilePage.post.unshift(post);
+    this._state.profilePage.newPostText = '';
+    this._callSubsctire(this._state)
+} else if (action.type === 'UPDATE-TEXT-AREA') {
+    this._state.profilePage.newPostText = action.newText;
+    this._callSubsctire(this._state)
+}
+    }
 
 }
