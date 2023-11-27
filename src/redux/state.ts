@@ -1,5 +1,8 @@
 import { ActionType, StateType, StoreType } from "./types";
 
+const ADD_POST = 'ADD-POST';
+const UPDATE_TEXTAREA = 'UPDATE-TEXT-AREA'
+
 export const store: StoreType = {
     _state: {
         profilePage: {
@@ -33,20 +36,21 @@ export const store: StoreType = {
         this._callSubsctire = observer
     },
 
-
     dispatch(action: ActionType) {
-if (action.type === 'ADD-POST') {
-    let post = {
-        id: '5',
-        post: this._state.profilePage.newPostText,
+        if (action.type === 'ADD-POST') {
+            let post = {
+                id: '5',
+                post: this._state.profilePage.newPostText,
+            }
+            this._state.profilePage.post.unshift(post);
+            this._state.profilePage.newPostText = '';
+            this._callSubsctire(this._state)
+        } else if (action.type === 'UPDATE-TEXT-AREA') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubsctire(this._state)
+        }
     }
-    this._state.profilePage.post.unshift(post);
-    this._state.profilePage.newPostText = '';
-    this._callSubsctire(this._state)
-} else if (action.type === 'UPDATE-TEXT-AREA') {
-    this._state.profilePage.newPostText = action.newText;
-    this._callSubsctire(this._state)
 }
-    }
 
-}
+export let addPostAC = () => ({type: ADD_POST});
+export let updagteTextareaAC = (newText: string | undefined) => ({type: UPDATE_TEXTAREA, newText: newText});

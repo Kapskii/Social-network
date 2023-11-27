@@ -1,3 +1,4 @@
+import { addPostAC, updagteTextareaAC } from "../../../redux/state"
 import { ActionType, ProfilePageType } from "../../../redux/types"
 import { Post } from "../post item/Post"
 import s from './MyPosts.module.css'
@@ -9,17 +10,19 @@ type PropsType = {
     dispatch: (action: ActionType) => void
 }
 
+
 export const MyPosts = (props: PropsType) => {
 
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
     const addPostHandler = () => {
-        props.dispatch({type: 'ADD-POST'});
+        props.dispatch(addPostAC());
     }
 
     const onChangeTextHandler = () => {
         let newText = newPostElement.current?.value;
-        props.dispatch({type: 'UPDATE-TEXT-AREA', newText: newText})
+        
+        props.dispatch(updagteTextareaAC(newText))
     }
 
     return (
