@@ -1,4 +1,4 @@
-import { addPostAC, updagteTextareaAC } from "../../../redux/state"
+import { addPostAC, updagteTextareaAC } from "../../../redux/redusers/propfile-reduser"
 import { ActionType, ProfilePageType } from "../../../redux/types"
 import { Post } from "../post item/Post"
 import s from './MyPosts.module.css'

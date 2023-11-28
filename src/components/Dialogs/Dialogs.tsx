@@ -3,7 +3,8 @@ import { DialogItem } from './DialogItem/DialogItem'
 import { Message } from './Message/Message'
 import React, { ChangeEvent} from 'react'
 import { ActionType, DialogsPageType } from '../../redux/types'
-import { sendMessageAC, updagteNewMessageTextAC } from '../../redux/state'
+import { sendMessageAC, updagteNewMessageTextAC } from '../../redux/redusers/dialog-reduser'
+
 
 type PropsType = {
     dialogsPage: DialogsPageType
