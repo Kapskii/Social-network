@@ -2,7 +2,7 @@ import React from "react"
 import s from './Message.module.css'
 
 type PropsMessageType = {
-    message: string
+    message: string | undefined
 }
 
 export const Message = (props:PropsMessageType) => {

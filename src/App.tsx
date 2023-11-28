@@ -21,7 +21,7 @@ export const App: FC<AppPropsType> = ({ data, dispatch}) => {
       <div className='mainWrapper'>
         <Routes>
           <Route path='/profile' element={<Propfile profilePage={data.profilePage} dispatch={dispatch} />} />
-          <Route path='/dialogs' element={<Dialogs dialogsDate={data.dialogsPage.dialog} messageDate={data.dialogsPage.message} />} />
+          <Route path='/dialogs' element={<Dialogs dialogsPage={data.dialogsPage} dispatch={dispatch} />} />
         </Routes>
       </div>
     </div>

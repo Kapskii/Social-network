@@ -20,6 +20,7 @@ export type ProfilePageType = {
 export type DialogsPageType = {
     dialog: DialogType[]
     message: MessageType[]
+    newMessageText: string | undefined
 }
 
 export type PostType = {
@@ -34,10 +35,11 @@ export type DialogType = {
 
 export type MessageType = {
     id: string
-    message: string
+    message: string | undefined
 }
 
 export type ActionType = { 
     type: string
     newText?: string | undefined
+    newMessage?: string | undefined
 }

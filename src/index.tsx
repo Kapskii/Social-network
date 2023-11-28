@@ -3,7 +3,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { store } from './redux/state';
 import { App } from './App';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { StateType } from './redux/types';
 import './index.css';
 
@@ -14,9 +14,9 @@ const root = ReactDOM.createRoot(
 
 const rerenderEntire = (props: StateType) => {
     root.render(
-        <HashRouter>
+        <BrowserRouter>
             <App data={store.getState()} dispatch={store.dispatch.bind(store)} />
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 

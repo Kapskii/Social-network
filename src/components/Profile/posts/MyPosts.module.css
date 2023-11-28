@@ -1,8 +1,9 @@
 .postWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 65%;
-    gap: 10px;
+    gap: 30px;
 }
 
 .title {
@@ -14,6 +15,7 @@
 .postCreateBlock {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 100%;
     align-items: center;
     justify-content: center;
