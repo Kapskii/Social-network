@@ -3,7 +3,21 @@ import { ActionType, DialogsPageType } from "../types";
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
-export const dialogReduser = (state: DialogsPageType, action: ActionType) => {
+const initialState = {
+    dialog: [
+        { id: '1', name: 'Slava' },
+        { id: '2', name: 'Olya' },
+        { id: '3', name: 'Vadim' },
+    ],
+    message: [
+        { id: '1', message: 'Hi' },
+        { id: '2', message: 'How are you?' },
+        { id: '3', message: 'Hello' },
+    ],
+    newMessageText: ''
+}
+
+export const dialogReduser = (state: DialogsPageType = initialState, action: ActionType) => {
     switch (action.type) {
         case SEND_MESSAGE:
             let message = {

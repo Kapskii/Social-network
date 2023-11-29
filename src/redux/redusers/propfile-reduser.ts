@@ -3,7 +3,17 @@ import { ActionType, ProfilePageType } from "../types";
 const ADD_POST = 'ADD-POST';
 const UPDATE_TEXTAREA = 'UPDATE-TEXT-AREA';
 
-export const profileReduser = (state: ProfilePageType, action: ActionType) => {
+const initialState = {
+    post: [
+        { id: '1', post: 'Hello World' },
+        { id: '2', post: 'My name Slava Kapski' },
+        { id: '3', post: 'I like React' },
+        { id: '4', post: 'Good job!' },
+    ],
+    newPostText: '',
+}
+
+export const profileReduser = (state: ProfilePageType = initialState, action: ActionType) => {
     switch (action.type) {
         case ADD_POST:
             let post = {

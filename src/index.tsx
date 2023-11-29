@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { store } from './redux/state';
+import { store } from './redux/redux-store';
 import { App } from './App';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { StateType } from './redux/types';
 import './index.css';
 
@@ -23,7 +23,10 @@ const rerenderEntire = (props: StateType) => {
 
 rerenderEntire(store.getState());
 
-store.subscribe(rerenderEntire);
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderEntire(state)
+});
 
 reportWebVitals();
 
