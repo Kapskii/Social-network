@@ -6,6 +6,7 @@ import { App } from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { StateType } from './redux/types';
 import './index.css';
+import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(
@@ -15,7 +16,9 @@ const root = ReactDOM.createRoot(
 const rerenderEntire = (props: StateType) => {
     root.render(
         <BrowserRouter>
-            <App data={store.getState()} dispatch={store.dispatch.bind(store)} />
+            <Provider store={undefined} children={undefined}>
+                <App data={store.getState()} dispatch={store.dispatch.bind(store)} />
+            </Provider>
         </BrowserRouter>
     );
 }
