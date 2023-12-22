@@ -16,9 +16,9 @@ const root = ReactDOM.createRoot(
 const rerenderEntire = (props: StateType) => {
     root.render(
         <BrowserRouter>
-            <Provider store={undefined} children={undefined}>
+            {/* <Provider> */}
                 <App data={store.getState()} dispatch={store.dispatch.bind(store)} />
-            </Provider>
+            {/* </Provider> */}
         </BrowserRouter>
     );
 }
